@@ -1,0 +1,147 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: rgba(243, 238, 226, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.site-header__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 20px;
+}
+
+@media (min-width: 720px) {
+  .site-header__row {
+    padding: 18px 32px;
+  }
+}
+
+.site-nav ul {
+  display: flex;
+  gap: 28px;
+}
+
+.site-nav__link {
+  font-size: 0.94rem;
+  font-weight: 500;
+  color: var(--color-ink-soft);
+  padding: 6px 0;
+  position: relative;
+}
+
+.site-nav__link.is-active,
+.site-nav__link:hover {
+  color: var(--color-forest);
+}
+
+.site-nav__link.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  height: 2px;
+  background: var(--color-blossom);
+  border-radius: 2px;
+}
+
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.basket-toggle {
+  position: relative;
+  background: transparent;
+  border: none;
+  color: var(--color-forest);
+  padding: 8px;
+  border-radius: var(--radius-pill);
+  display: flex;
+}
+
+.basket-toggle:hover {
+  background: var(--color-forest-pale);
+}
+
+.basket-toggle__count {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  background: var(--color-blossom);
+  color: var(--color-white);
+  font-size: 0.65rem;
+  font-weight: 700;
+  min-width: 17px;
+  height: 17px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
+}
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 2px;
+  width: 22px;
+  margin: 0 auto;
+  background: var(--color-forest);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+@media (min-width: 860px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .site-nav {
+    display: block !important;
+  }
+}
+
+@media (max-width: 859px) {
+  .site-nav {
+    position: fixed;
+    inset: 0 0 0 auto;
+    width: min(78vw, 320px);
+    background: var(--color-white);
+    box-shadow: -12px 0 30px rgba(30, 58, 43, 0.15);
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+    padding: 90px 28px 28px;
+    display: block;
+  }
+
+  .site-nav--open {
+    transform: translateX(0);
+  }
+
+  .site-nav ul {
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .site-nav__link {
+    font-size: 1.1rem;
+  }
+}

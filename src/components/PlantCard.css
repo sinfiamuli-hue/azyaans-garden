@@ -1,0 +1,69 @@
+.plant-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.plant-card__media {
+  position: relative;
+  display: block;
+  border-radius: var(--radius-soft);
+  overflow: hidden;
+}
+
+.plant-card__image {
+  transition: transform 0.35s ease;
+}
+
+.plant-card__media:hover .plant-card__image {
+  transform: scale(1.045);
+}
+
+.plant-card__badges {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.plant-card__body {
+  padding-top: 14px;
+}
+
+.plant-card__name {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 560;
+  font-size: 1.08rem;
+  color: var(--color-forest);
+}
+
+.plant-card__name:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--color-line);
+}
+
+.plant-card__category {
+  margin-top: 3px;
+  font-size: 0.84rem;
+  color: var(--color-ink-soft);
+}
+
+.plant-card__footer {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.plant-card__price {
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.plant-card__add {
+  padding: 8px 18px;
+  font-size: 0.85rem;
+}

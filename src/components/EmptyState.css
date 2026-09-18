@@ -1,0 +1,32 @@
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.empty-state__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--color-forest-pale);
+  color: var(--color-forest);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+}
+
+.empty-state h3 {
+  font-size: 1.2rem;
+}
+
+.empty-state p {
+  margin-top: 8px;
+  color: var(--color-ink-soft);
+  font-size: 0.95rem;
+}
+
+.empty-state .btn {
+  margin-top: 20px;
+}
