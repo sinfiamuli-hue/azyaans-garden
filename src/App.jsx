@@ -1,1 +1,45 @@
-import{useState,useEffect}from'react';import{BrowserRouter,Routes,Route}from'react-router-dom';import{Navbar}from'./components/Navbar';import{Footer}from'./components/Footer';import{BasketDrawer}from'./components/BasketDrawer';import{CheckoutModal}from'./components/CheckoutModal';import{FloatingWhatsApp}from'./components/FloatingWhatsApp';import{HomePage}from'./pages/HomePage';import{PlantsPage}from'./pages/PlantsPage';import{PlantDetailPage}from'./pages/PlantDetailPage';import{StoryPage}from'./pages/StoryPage';import{PolicyPage}from'./pages/PolicyPage';import{NotFoundPage}from'./pages/NotFoundPage';export default function App(){const[cart,setCart]=useState(()=>{try{return JSON.parse(localStorage.getItem('azyaans_garden_cart')||'[]')}catch{return[]}}),[basket,setBasket]=useState(false),[checkout,setCheckout]=useState(false);useEffect(()=>localStorage.setItem('azyaans_garden_cart',JSON.stringify(cart)),[cart]);const add=p=>{setCart(c=>{let i=c.findIndex(x=>x.id===p.id);if(i<0)return[...c,{...p,quantity:1}];let n=[...c];n[i]={...n[i],quantity:Math.min(n[i].quantity+1,p.stock)};return n});setBasket(true)},update=(id,q)=>setCart(c=>c.map(i=>i.id===id?{...i,quantity:q}:i).filter(i=>i.quantity>0)),remove=id=>setCart(c=>c.filter(i=>i.id!==id)),count=cart.reduce((s,i)=>s+i.quantity,0);return <BrowserRouter><div className="min-h-screen flex flex-col"><Navbar cartCount={count} onOpenBasket={()=>setBasket(true)}/><main className="flex-1"><Routes><Route path="/" element={<HomePage onAddToCart={add}/>}/><Route path="/plants" element={<PlantsPage onAddToCart={add}/>}/><Route path="/plants/:slug" element={<PlantDetailPage onAddToCart={add}/>}/><Route path="/story" element={<StoryPage/>}/><Route path="/policy" element={<PolicyPage/>}/><Route path="*" element={<NotFoundPage/>}/></Routes></main><Footer/><BasketDrawer isOpen={basket} onClose={()=>setBasket(false)} cart={cart} onUpdateQuantity={update} onRemoveItem={remove} onProceedToCheckout={()=>{setBasket(false);setCheckout(true)}}/><CheckoutModal isOpen={checkout} onClose={()=>setCheckout(false)} cart={cart} clearCart={()=>setCart([])}/><FloatingWhatsApp/></div></BrowserRouter>}
+import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
+import FloatingWhatsApp from "./components/FloatingWhatsApp.jsx";
+import BasketDrawer from "./components/BasketDrawer.jsx";
+import Home from "./pages/Home.jsx";
+import Plants from "./pages/Plants.jsx";
+import PlantDetail from "./pages/PlantDetail.jsx";
+import OurStory from "./pages/OurStory.jsx";
+import Delivery from "./pages/Delivery.jsx";
+import NotFound from "./pages/NotFound.jsx";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
+
+export default function App() {
+  return (
+    <>
+      <a href="#main-content" className="skip-link">
+        Skip to content
+      </a>
+      <ScrollToTop />
+      <Header />
+      <main id="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/plants" element={<Plants />} />
+          <Route path="/plants/:slug" element={<PlantDetail />} />
+          <Route path="/our-story" element={<OurStory />} />
+          <Route path="/delivery" element={<Delivery />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+      <Footer />
+      <FloatingWhatsApp />
+      <BasketDrawer />
+    </>
+  );
+}
