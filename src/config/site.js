@@ -59,7 +59,7 @@ const siteConfig = {
   },
 
   // Footer legal line
-  copyrightYear: Sinfia 2026,
+  copyrightYear: 2026,
 };
 
 export default siteConfig;
