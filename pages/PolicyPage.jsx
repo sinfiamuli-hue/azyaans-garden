@@ -1,0 +1,1 @@
+import{SeoMeta}from'../components/SeoMeta';import{CollectionPolicy}from'../components/CollectionPolicy';export function PolicyPage(){return <><SeoMeta title="Collection & Delivery"/><CollectionPolicy/></>}
