@@ -1,1 +1,65 @@
+.delivery-page {
+  padding: 50px 0 70px;
+}
 
+.delivery-page__head {
+  max-width: 640px;
+  margin-bottom: 36px;
+}
+
+.delivery-page__head h1 {
+  margin-top: 8px;
+  font-size: clamp(2rem, 5vw, 2.7rem);
+}
+
+.delivery-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+  .delivery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.delivery-card {
+  background: var(--color-white);
+  border: 1.5px solid var(--color-line);
+  border-radius: var(--radius-soft);
+  padding: 26px;
+}
+
+.delivery-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.delivery-card p {
+  color: var(--color-ink-soft);
+  font-size: 0.92rem;
+  margin-top: 8px;
+}
+
+.delivery-card__fee {
+  font-weight: 600;
+  color: var(--color-forest);
+}
+
+.delivery-page__note {
+  margin-top: 44px;
+  padding: 28px;
+  background: var(--color-forest-pale);
+  border-radius: var(--radius-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  max-width: 640px;
+}
+
+.delivery-page__note p {
+  color: var(--color-forest);
+  font-size: 0.95rem;
+}
