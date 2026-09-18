@@ -1,0 +1,42 @@
+.story-page__head {
+  padding: 50px 0 8px;
+  max-width: 640px;
+}
+
+.story-page__head h1 {
+  margin-top: 8px;
+  font-size: clamp(2rem, 5vw, 2.7rem);
+}
+
+.story-page__body {
+  padding: 24px 0 70px;
+  max-width: 640px;
+}
+
+.story-page__lede {
+  font-size: 1.1rem;
+  color: var(--color-ink-soft);
+}
+
+.story-page__block {
+  margin-top: 36px;
+}
+
+.story-page__block h2 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.story-page__block p {
+  color: var(--color-ink-soft);
+}
+
+.story-page__block--note {
+  background: var(--color-cream-deep);
+  padding: 24px;
+  border-radius: var(--radius-soft);
+}
+
+.story-page__cta {
+  margin-top: 40px;
+}

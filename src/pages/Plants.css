@@ -1,0 +1,114 @@
+.plants-page__head {
+  padding: 44px 0 8px;
+}
+
+.plants-page__head h1 {
+  font-size: clamp(2rem, 5vw, 2.7rem);
+  margin-top: 6px;
+}
+
+.plants-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px 0 18px;
+}
+
+@media (min-width: 720px) {
+  .plants-toolbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.plants-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-white);
+  border: 1.5px solid var(--color-line);
+  border-radius: var(--radius-pill);
+  padding: 11px 18px;
+  color: var(--color-ink-soft);
+  flex: 1;
+  max-width: 420px;
+}
+
+.plants-search input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  color: var(--color-ink);
+}
+
+.plants-toolbar__controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.plants-select {
+  border: 1.5px solid var(--color-line);
+  border-radius: var(--radius-pill);
+  padding: 10px 16px;
+  background: var(--color-white);
+  color: var(--color-ink);
+}
+
+.plants-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--color-ink-soft);
+}
+
+.category-tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 22px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.category-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.category-tab {
+  flex-shrink: 0;
+  background: transparent;
+  border: 1.5px solid var(--color-line);
+  border-radius: var(--radius-pill);
+  padding: 9px 18px;
+  font-size: 0.87rem;
+  font-weight: 500;
+  color: var(--color-ink-soft);
+}
+
+.category-tab.is-active {
+  background: var(--color-forest);
+  border-color: var(--color-forest);
+  color: var(--color-white);
+}
+
+.plants-page__grid {
+  padding-bottom: 60px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 640px) {
+  .plants-page__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .plants-page__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

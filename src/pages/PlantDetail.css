@@ -1,0 +1,140 @@
+.plant-detail {
+  padding: 24px 0 60px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--color-ink-soft);
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.plant-detail__layout {
+  display: grid;
+  gap: 36px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 860px) {
+  .plant-detail__layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+  }
+}
+
+.plant-detail__image {
+  border-radius: var(--radius-soft);
+  aspect-ratio: 1 / 1;
+}
+
+.plant-detail__badges {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.plant-detail__info h1 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+}
+
+.plant-detail__id {
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: var(--color-ink-soft);
+}
+
+.plant-detail__price {
+  margin-top: 14px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-forest);
+}
+
+.plant-detail__description {
+  margin-top: 16px;
+  color: var(--color-ink-soft);
+  max-width: 54ch;
+}
+
+.plant-detail__specs {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 24px;
+  padding: 20px;
+  background: var(--color-cream-deep);
+  border-radius: var(--radius-soft);
+}
+
+.plant-detail__specs dt {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-ink-soft);
+}
+
+.plant-detail__specs dd {
+  margin: 3px 0 0;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.plant-detail__actions {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.plant-detail__unavailable {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--color-danger);
+  font-weight: 500;
+}
+
+.plant-detail__fallback {
+  margin-top: 14px;
+  font-size: 0.85rem;
+  color: var(--color-danger);
+}
+
+.plant-detail__fallback a {
+  text-decoration: underline;
+}
+
+.plant-detail__fact {
+  margin-top: 28px;
+  border-top: 1px solid var(--color-line);
+  padding-top: 20px;
+}
+
+.plant-detail__fact strong {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--color-forest);
+  margin-bottom: 6px;
+}
+
+.plant-detail__fact p {
+  color: var(--color-ink-soft);
+  font-size: 0.92rem;
+}
+
+.plant-detail__related {
+  margin-top: 72px;
+}
+
+.plant-detail__related .section-title {
+  margin-bottom: 24px;
+}
