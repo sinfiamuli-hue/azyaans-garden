@@ -1,0 +1,219 @@
+// ─────────────────────────────────────────────────────────────
+// PLANT DATA — THIS IS THE FILE YOU EDIT MOST OFTEN
+// ─────────────────────────────────────────────────────────────
+// To add a plant: copy an existing object below, change every
+// field, and give it a new unique `id` (e.g. AG-190).
+//
+// Field guide:
+//   id           unique code, format "AG-###" — shown to
+//                customers so the parent can identify orders
+//   name         plant name shown everywhere
+//   slug         URL-safe version of the name (lowercase, hyphens)
+//   category     must match a `slug` in src/data/categories.js
+//   price        a plain number, no currency symbol
+//   image        path to the main photo, e.g. "/images/plants/AG-120.jpg"
+//   available    true/false — set false when sold out
+//   stock        number left (used for the "Low Stock" badge)
+//   featured     true to show on the homepage
+//   isNew        true to show a "New" badge
+//
+// SAMPLE INVENTORY NOTICE:
+// Every plant below is SAMPLE DATA so the site looks complete
+// out of the box. Replace it with your real plants before
+// launch — none of these are actually available for sale yet.
+// ─────────────────────────────────────────────────────────────
+
+const plants = [
+  {
+    id: "AG-120",
+    name: "Bunny Ears Cactus",
+    slug: "bunny-ears-cactus",
+    category: "cactus",
+    price: 120,
+    image: "/images/plants/AG-120.svg",
+    available: true,
+    stock: 3,
+    featured: true,
+    isNew: false,
+    description:
+      "A friendly, paddle-shaped cactus named for its two round ears. Slow-growing and easy to love — a good first cactus for a sunny windowsill.",
+    light: "Bright, direct sunlight",
+    watering: "Let soil dry out fully between waterings",
+    difficulty: "Easy",
+    size: "Small",
+    fact: "Its tiny golden dots aren't thorns — they're clusters of fine, fragile bristles called glochids.",
+  },
+  {
+    id: "AG-435",
+    name: "Bonsai Ficus",
+    slug: "bonsai-ficus",
+    category: "bonsai",
+    price: 435,
+    image: "/images/plants/AG-435.svg",
+    available: true,
+    stock: 2,
+    featured: true,
+    isNew: false,
+    description:
+      "A patient little tree with glossy leaves and character in its trunk. Rewards a steady hand and a bit of weekly attention.",
+    light: "Bright indirect light",
+    watering: "Water when the top inch of soil feels dry",
+    difficulty: "Moderate",
+    size: "Medium",
+    fact: "With good care, a bonsai like this can live for decades — some even get passed down through families.",
+  },
+  {
+    id: "AG-080",
+    name: "Aloe Vera",
+    slug: "aloe-vera",
+    category: "succulents",
+    price: 80,
+    image: "/images/plants/AG-080.svg",
+    available: true,
+    stock: 6,
+    featured: true,
+    isNew: false,
+    description:
+      "A classic, hard-working succulent with thick, soothing leaves. Handles a bit of neglect better than most.",
+    light: "Bright indirect to direct sunlight",
+    watering: "Deep water, then let it dry out completely",
+    difficulty: "Easy",
+    size: "Small",
+    fact: "Aloe has been grown and used by people for thousands of years — it's one of the oldest known houseplants.",
+  },
+  {
+    id: "AG-150",
+    name: "Haworthia",
+    slug: "haworthia",
+    category: "succulents",
+    price: 150,
+    image: "/images/plants/AG-150.svg",
+    available: true,
+    stock: 0,
+    featured: false,
+    isNew: true,
+    description:
+      "Small striped rosettes that look almost like little zebras. Perfect for a desk or a narrow sunny ledge.",
+    light: "Bright indirect light — avoid harsh midday sun",
+    watering: "Light watering, allow to dry between",
+    difficulty: "Easy",
+    size: "Small",
+    fact: "Haworthia's translucent leaf tips work like tiny skylights, letting light reach the plant's core.",
+  },
+  {
+    id: "AG-180",
+    name: "Echeveria",
+    slug: "echeveria",
+    category: "succulents",
+    price: 180,
+    image: "/images/plants/AG-180.svg",
+    available: true,
+    stock: 4,
+    featured: true,
+    isNew: false,
+    description:
+      "A rosette of dusty blue-green leaves that looks like it was folded by hand. One of the prettiest succulents in the garden.",
+    light: "Bright, direct sunlight",
+    watering: "Water sparingly, let soil dry fully between",
+    difficulty: "Easy",
+    size: "Small",
+    fact: "The soft, powdery coating on its leaves is called farina — it helps protect the plant from strong sun.",
+  },
+  {
+    id: "AG-210",
+    name: "Golden Barrel Cactus",
+    slug: "golden-barrel-cactus",
+    category: "cactus",
+    price: 210,
+    image: "/images/plants/AG-210.svg",
+    available: true,
+    stock: 2,
+    featured: false,
+    isNew: true,
+    description:
+      "A round, ribbed cactus with golden spines that catch the light beautifully in the afternoon.",
+    light: "Full sun",
+    watering: "Infrequent — allow soil to dry fully",
+    difficulty: "Easy",
+    size: "Medium",
+    fact: "In its natural habitat, a barrel cactus this size could already be several years old.",
+  },
+  {
+    id: "AG-095",
+    name: "Snake Plant",
+    slug: "snake-plant",
+    category: "indoor-plants",
+    price: 95,
+    image: "/images/plants/AG-095.svg",
+    available: true,
+    stock: 5,
+    featured: false,
+    isNew: false,
+    description:
+      "Tall, upright leaves with a striking pattern. One of the most forgiving indoor plants there is.",
+    light: "Low to bright indirect light",
+    watering: "Water sparingly, roughly once every two to three weeks",
+    difficulty: "Easy",
+    size: "Medium",
+    fact: "Snake plants are known for quietly tolerating almost any corner of a room, dim or bright.",
+  },
+  {
+    id: "AG-260",
+    name: "Frangipani Cutting",
+    slug: "frangipani-cutting",
+    category: "flowering-plants",
+    price: 260,
+    image: "/images/plants/AG-260.svg",
+    available: true,
+    stock: 3,
+    featured: false,
+    isNew: false,
+    description:
+      "A rooted frangipani cutting that will grow into a small tree of fragrant, five-petalled flowers.",
+    light: "Full sun",
+    watering: "Water when soil is dry to the touch",
+    difficulty: "Moderate",
+    size: "Medium",
+    fact: "Frangipani flowers are among the most fragrant in the islands, especially in the evening.",
+  },
+  {
+    id: "AG-140",
+    name: "Money Plant",
+    slug: "money-plant",
+    category: "indoor-plants",
+    price: 140,
+    image: "/images/plants/AG-140.svg",
+    available: true,
+    stock: 4,
+    featured: false,
+    isNew: false,
+    description:
+      "Trailing, heart-shaped leaves that are happy to climb a trellis or spill from a shelf.",
+    light: "Bright indirect light",
+    watering: "Water when the top of the soil feels dry",
+    difficulty: "Easy",
+    size: "Small",
+    fact: "A money plant will grow toward the nearest light source, so a quarter-turn each week keeps it even.",
+  },
+  {
+    id: "AG-330",
+    name: "Dwarf Coconut Sapling",
+    slug: "dwarf-coconut-sapling",
+    category: "outdoor-plants",
+    price: 330,
+    image: "/images/plants/AG-330.svg",
+    available: false,
+    stock: 0,
+    featured: false,
+    isNew: false,
+    description:
+      "A young dwarf coconut palm, grown from seed. A slow, rewarding outdoor project for a sunny garden spot.",
+    light: "Full sun",
+    watering: "Regular watering, especially while young",
+    difficulty: "Moderate",
+    size: "Large",
+    fact: "A coconut palm can keep producing fruit for well over sixty years once it matures.",
+  },
+];
+
+export default plants;
