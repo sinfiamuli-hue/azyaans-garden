@@ -1,0 +1,1 @@
+import{MessageCircle}from'lucide-react';import{siteConfig}from'../config/site';export function FloatingWhatsApp(){return <button onClick={()=>window.open(`https://wa.me/${siteConfig.whatsappNumber}`,'_blank')} className="fixed bottom-6 right-6 z-40 bg-emerald-600 text-white p-4 rounded-full shadow-2xl"><MessageCircle/></button>}
