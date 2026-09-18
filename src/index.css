@@ -1,0 +1,2 @@
+@import "tailwindcss";
+:root{--green:#2d5a27;--sand:#fdfbf7}body{margin:0;background:var(--sand);color:#1c2826;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}html{scroll-behavior:smooth}::selection{background:#d1fae5;color:#065f46}
