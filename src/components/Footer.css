@@ -80,6 +80,6 @@
      brand description and the copyright line on phones. */
   .site-footer__brand p,
   .site-footer__bottom p {
-    padding-left: 6px;
+    padding-left: 16px;
   }
 }
