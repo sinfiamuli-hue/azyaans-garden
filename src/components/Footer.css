@@ -62,3 +62,9 @@
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.5);
 }
+
+   @media (max-width: 640px) {
+     .site-footer__bottom {
+       padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+     }
+   }
