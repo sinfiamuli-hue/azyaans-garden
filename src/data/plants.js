@@ -140,8 +140,8 @@ const plants = [
   },
   {
     id: "AG-095",
-    name: "Snake Plant",
-    slug: "snake-plant",
+    name: "Sansevieria Cylinderica ",
+    slug: "Sansevieria Cylinderica-plant",
     category: "indoor-plants",
     price: 150,
     image: "/images/plants/AG-095.jpg",
