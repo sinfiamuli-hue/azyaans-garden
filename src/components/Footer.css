@@ -100,9 +100,17 @@
     align-items: center;
   }
 
-  /* Keep the copyright line's earlier left-margin fix as-is —
-     only the brand/Explore/Contact block above is centered. */
+  /* Center the policy paragraphs and the copyright line too. */
+  .site-footer__policy {
+    align-items: center;
+    text-align: center;
+  }
+
+  .site-footer__bottom {
+    text-align: center;
+  }
+
   .site-footer__bottom p {
-    padding-left: 16px;
+    padding-left: 0;
   }
 }
