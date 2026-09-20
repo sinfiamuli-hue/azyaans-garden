@@ -76,9 +76,32 @@
     padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
   }
 
-  /* A touch of extra breathing room from the screen edge for the
-     brand description and the copyright line on phones. */
-  .site-footer__brand p,
+  /* Center the brand block, Explore column and Contact column on
+     phone screens instead of left-aligning them. */
+  .site-footer__top {
+    text-align: center;
+  }
+
+  .site-footer__brand {
+    align-items: center;
+  }
+
+  .site-footer__brand p {
+    padding-left: 0;
+  }
+
+  .site-footer__col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .site-footer__col ul {
+    align-items: center;
+  }
+
+  /* Keep the copyright line's earlier left-margin fix as-is —
+     only the brand/Explore/Contact block above is centered. */
   .site-footer__bottom p {
     padding-left: 16px;
   }
