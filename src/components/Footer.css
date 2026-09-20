@@ -1,19 +1,43 @@
+/* ─────────────────────────────────────────────────────────
+   FOOTER — refined, editorial version
+   Same class names as before, so no JSX changes are needed.
+   ───────────────────────────────────────────────────────── */
+
 .site-footer {
-  background: var(--color-forest);
-  color: rgba(255, 255, 255, 0.85);
+  position: relative;
   margin-top: 40px;
+  background: linear-gradient(180deg, #1e3a2b 0%, #172d20 100%);
+  color: rgba(255, 255, 255, 0.85);
 }
+
+/* A quiet accent line along the top edge, instead of a hard cut
+   from the cream section above. */
+.site-footer::before {
+  content: "";
+  display: block;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--color-gold) 0%,
+    var(--color-blossom) 45%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+  opacity: 0.75;
+}
+
+/* ── Top area: brand + link columns ─────────────────────── */
 
 .site-footer__top {
   display: grid;
-  gap: 40px;
-  padding: 56px 0 32px;
+  gap: 48px;
+  padding: 72px 0 40px;
   grid-template-columns: 1fr;
 }
 
 @media (min-width: 720px) {
   .site-footer__top {
-    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
   }
 }
 
@@ -23,49 +47,89 @@
   gap: 18px;
 }
 
+.site-footer__brand .logo--light .logo__name {
+  font-size: 1.28rem;
+}
+
 .site-footer__brand p {
-  max-width: 34ch;
-  font-size: 0.92rem;
-  color: rgba(255, 255, 255, 0.68);
+  max-width: 32ch;
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.62);
 }
 
 .site-footer__col h3 {
-  color: var(--color-white);
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: 0.85rem;
-  text-transform: none;
-  margin-bottom: 14px;
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 18px;
 }
 
 .site-footer__col ul {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  font-size: 0.92rem;
+  gap: 13px;
+  font-size: 0.94rem;
   color: rgba(255, 255, 255, 0.72);
 }
 
-.site-footer__col a:hover {
-  color: var(--color-white);
+.site-footer__col li {
+  line-height: 1.4;
 }
+
+.site-footer__col a {
+  position: relative;
+  display: inline-block;
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+
+.site-footer__col a:hover,
+.site-footer__col a:focus-visible {
+  color: var(--color-white);
+  transform: translateX(2px);
+}
+
+.site-footer__col a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -3px;
+  height: 1px;
+  background: var(--color-gold);
+  transition: right 0.2s ease;
+}
+
+.site-footer__col a:hover::after,
+.site-footer__col a:focus-visible::after {
+  right: 0;
+}
+
+/* ── Policy strip ─────────────────────────────────────────*/
 
 .site-footer__policy {
-  border-top: 1px solid var(--color-line-on-forest);
-  padding: 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px 0;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.58);
-  max-width: 900px;
+  gap: 10px;
+  font-size: 0.84rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.5);
+  max-width: 860px;
 }
 
+/* ── Bottom bar ───────────────────────────────────────────*/
+
 .site-footer__bottom {
-  border-top: 1px solid var(--color-line-on-forest);
-  padding: 18px 0 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 22px 0 32px;
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.45);
 }
 
 /* Reserve just enough room so the fixed floating WhatsApp button
@@ -76,18 +140,13 @@
     padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
   }
 
-  /* Center the brand block, Explore column and Contact column on
-     phone screens instead of left-aligning them. */
+  /* Center the whole footer on phones instead of left-aligning it. */
   .site-footer__top {
     text-align: center;
   }
 
   .site-footer__brand {
     align-items: center;
-  }
-
-  .site-footer__brand p {
-    padding-left: 0;
   }
 
   .site-footer__col {
@@ -100,17 +159,13 @@
     align-items: center;
   }
 
-  /* Center the policy paragraphs and the copyright line too. */
   .site-footer__policy {
     align-items: center;
     text-align: center;
+    margin: 0 auto;
   }
 
   .site-footer__bottom {
     text-align: center;
-  }
-
-  .site-footer__bottom p {
-    padding-left: 0;
   }
 }
