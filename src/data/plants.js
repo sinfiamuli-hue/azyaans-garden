@@ -68,7 +68,7 @@ const plants = [
     slug: "bonsai-ficus",
     category: "bonsai",
     price: 550,
-    image: "/images/plants/AG-435.jpg",
+    image: "/images/plants/AG-436.jpg",
     available: true,
     stock: 2,
     featured: true,
