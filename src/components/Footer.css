@@ -75,4 +75,11 @@
   .site-footer__bottom {
     padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
   }
+
+  /* A touch of extra breathing room from the screen edge for the
+     brand description and the copyright line on phones. */
+  .site-footer__brand p,
+  .site-footer__bottom p {
+    padding-left: 6px;
+  }
 }
