@@ -241,7 +241,7 @@ const plants = [
     price: 565,
     image: "/images/plants/AG-190.jpg",
     available: true,
-    stock: 2,
+    stock: 1,
     featured: false,
     isNew: true,
     description:
