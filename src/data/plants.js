@@ -257,10 +257,10 @@ const plants = [
     name: "ZZ Plant",
     slug: "zz-plant",
     category: "indoor-plants",
-    price: 565,
+    price: 350,
     image: "/images/plants/AG-190.jpg",
     available: true,
-    stock: 2,
+    stock: 1,
     featured: false,
     isNew: true,
     description:
