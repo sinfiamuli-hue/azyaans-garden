@@ -2,20 +2,30 @@
 // PLANT DATA — THIS IS THE FILE YOU EDIT MOST OFTEN
 // ─────────────────────────────────────────────────────────────
 // To add a plant: copy an existing object below, change every
-// field, and give it a new unique `id` (e.g. AG-190).
+// field, and give it a new unique `id` (e.g. AG-439).
 //
 // Field guide:
 //   id           unique code, format "AG-###" — shown to
-//                customers so the parent can identify orders
-//   name         plant name shown everywhere
-//   slug         URL-safe version of the name (lowercase, hyphens)
+//                customers so the parent can identify orders.
+//                MUST BE UNIQUE — the basket uses it to tell
+//                plants apart. Never reuse an id.
+//   name         plant name shown everywhere (can repeat)
+//   slug         URL-safe version of the name (lowercase, hyphens,
+//                no spaces). MUST BE UNIQUE — it is the plant's
+//                web address. Easy rule: name + id,
+//                e.g. "zz-plant-ag-437"
 //   category     must match a `slug` in src/data/categories.js
 //   price        a plain number, no currency symbol
-//   image        path to the main photo, e.g. "/images/plants/AG-120.jpg"
+//   image        path to the main photo. Name the file after the id
+//                and match the extension exactly (.jpg vs .svg),
+//                e.g. "/images/plants/AG-120.jpg"
 //   available    true/false — set false when sold out
 //   stock        number left (used for the "Low Stock" badge)
 //   featured     true to show on the homepage
 //   isNew        true to show a "New" badge
+//
+// SAME PLANT, DIFFERENT PRICE? Make a separate entry for each one,
+// with its own id, slug, price and image.
 //
 // SAMPLE INVENTORY NOTICE:
 // Every plant below is SAMPLE DATA so the site looks complete
@@ -46,7 +56,7 @@ const plants = [
   {
     id: "AG-435",
     name: "Bonsai Ficus",
-    slug: "bonsai-ficus",
+    slug: "bonsai-ficus-ag-435",
     category: "bonsai",
     price: 435,
     image: "/images/plants/AG-435.jpg",
@@ -63,9 +73,9 @@ const plants = [
     fact: "With good care, a bonsai like this can live for decades — some even get passed down through families.",
   },
   {
-     id: "AG-436",
+    id: "AG-436",
     name: "Bonsai Ficus",
-    slug: "bonsai-ficus",
+    slug: "bonsai-ficus-ag-436",
     category: "bonsai",
     price: 550,
     image: "/images/plants/AG-436.jpg",
@@ -159,8 +169,8 @@ const plants = [
   },
   {
     id: "AG-095",
-    name: "Sansevieria Cylinderica ",
-    slug: "Sansevieria Cylinderica-plant",
+    name: "Sansevieria Cylindrica",
+    slug: "sansevieria-cylindrica",
     category: "indoor-plants",
     price: 150,
     image: "/images/plants/AG-095.jpg",
@@ -234,9 +244,9 @@ const plants = [
     fact: "A coconut palm can keep producing fruit for well over sixty years once it matures.",
   },
   {
-    id: "AG-437",
+    id: "AG-190",
     name: "ZZ Plant",
-    slug: "zz-plant",
+    slug: "zz-plant-ag-190",
     category: "indoor-plants",
     price: 565,
     image: "/images/plants/AG-190.jpg",
@@ -255,7 +265,7 @@ const plants = [
   {
     id: "AG-437",
     name: "ZZ Plant",
-    slug: "zz-plant",
+    slug: "zz-plant-ag-437",
     category: "indoor-plants",
     price: 350,
     image: "/images/plants/AG-437.jpg",
@@ -272,4 +282,22 @@ const plants = [
     fact: "The ZZ plant stores water in its thick rhizomes, which is why it can go weeks without a drink.",
   },
 ];
+
+// SAFETY CHECK (only runs while developing with `npm run dev`).
+// Prints a red error in the browser console if two plants share an
+// id or a slug, so mistakes like this are caught immediately.
+if (import.meta.env.DEV) {
+  ["id", "slug"].forEach((field) => {
+    const seen = new Set();
+    plants.forEach((p) => {
+      if (seen.has(p[field])) {
+        console.error(
+          `[plants.js] Duplicate ${field}: "${p[field]}" — every plant needs its own unique ${field}.`
+        );
+      }
+      seen.add(p[field]);
+    });
+  });
+}
+
 export default plants;
