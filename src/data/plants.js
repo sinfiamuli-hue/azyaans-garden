@@ -58,7 +58,7 @@ const plants = [
     name: "Rattail Cactus",
     slug: "rattail-cactus-ag-440",
     category: "cactus",
-    price: 120,
+    price: 675,
     image: "/images/plants/AG-440.jpg",
     available: true,
     stock: 3,
