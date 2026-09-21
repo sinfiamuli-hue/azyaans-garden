@@ -234,7 +234,7 @@ const plants = [
     fact: "A coconut palm can keep producing fruit for well over sixty years once it matures.",
   },
   {
-    id: "AG-190",
+    id: "AG-437",
     name: "ZZ Plant",
     slug: "zz-plant",
     category: "indoor-plants",
