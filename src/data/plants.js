@@ -300,6 +300,25 @@ const plants = [
     size: "Medium",
     fact: "The ZZ plant stores water in its thick rhizomes, which is why it can go weeks without a drink.",
   },
+    {
+    id: "AG-437",
+    name: "ZZ Plant",
+    slug: "zz-plant-ag-437",
+    category: "indoor-plants",
+    price: 350,
+    image: "/images/plants/AG-437.jpg",
+    available: true,
+    stock: 1,
+    featured: false,
+    isNew: true,
+    description:
+      "Glossy, upright stems that look almost too perfect to be real. Thrives on neglect and tolerates low light without complaint.",
+    light: "Low to bright indirect light",
+    watering: "Water sparingly, let soil dry out fully between waterings",
+    difficulty: "Easy",
+    size: "Medium",
+    fact: "The ZZ plant stores water in its thick rhizomes, which is why it can go weeks without a drink.",
+  },
 ];
 
 // SAFETY CHECK (only runs while developing with `npm run dev`).
