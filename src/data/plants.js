@@ -227,7 +227,7 @@ const plants = [
   {
     id: "AG-442",
     name: "Money Plant",
-    slug: "money-plant-ag-442",
+    slug: "money-plant",
     category: "indoor-plants",
     price: 145,
     image: "/images/plants/AG-442.jpg",
@@ -246,7 +246,7 @@ const plants = [
   {
   id: "AG-440",
   name: "Rat Tail Cactus",
-  slug: "rat-tail-cactus-ag-440",
+  slug: "rat-tail-cactus",
   category: "indoor-plants",
   price: 145,
   image: "/images/plants/AG-440.jpg",
