@@ -230,9 +230,9 @@ const plants = [
     slug: "money-plant",
     category: "indoor-plants",
     price: 145,
-    image: "/images/plants/AG-440.svg",
+    image: "/images/plants/AG-440.jpg",
     available: true,
-    stock: 4,
+    stock: 1,
     featured: false,
     isNew: false,
     description:
