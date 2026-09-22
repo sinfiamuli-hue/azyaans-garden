@@ -305,7 +305,7 @@ const plants = [
     name: "Snake Plant",
     slug: "snake-plant-ag-441",
     category: "indoor-plants",
-    price: 350,
+    price: 650,
     image: "/images/plants/AG-441.jpg",
     available: true,
     stock: 1,
