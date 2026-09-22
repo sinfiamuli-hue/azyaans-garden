@@ -343,7 +343,7 @@ const plants = [
   name: "African Spear",
   slug: "african-spear-plant-ag-338",
   category: "indoor-plants",
-  price: 650,
+  price: 450,
   image: "/images/plants/AG-338.jpg",
   available: true,
   stock: 1,
