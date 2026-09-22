@@ -170,7 +170,6 @@ const plants = [
   {
     id: "AG-439",
     name: "Fairy Castle Cactus",
-",
     slug: "fairy-castle-cactus",
     category: "cactus",
     price: 750,
