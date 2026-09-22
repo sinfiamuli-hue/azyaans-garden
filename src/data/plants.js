@@ -41,7 +41,7 @@ const plants = [
     price: 120,
     image: "/images/plants/AG-120.jpg",
     available: true,
-    stock: 3,
+    stock: 1,
     featured: true,
     isNew: false,
     description:
@@ -60,7 +60,7 @@ const plants = [
     price: 435,
     image: "/images/plants/AG-435.jpg",
     available: true,
-    stock: 2,
+    stock: 1,
     featured: true,
     isNew: false,
     description:
@@ -79,7 +79,7 @@ const plants = [
     price: 550,
     image: "/images/plants/AG-436.jpg",
     available: true,
-    stock: 2,
+    stock: 1,
     featured: true,
     isNew: false,
     description:
@@ -98,7 +98,7 @@ const plants = [
     price: 80,
     image: "/images/plants/AG-080.svg",
     available: true,
-    stock: 6,
+    stock: 1,
     featured: true,
     isNew: false,
     description:
@@ -117,7 +117,7 @@ const plants = [
     price: 150,
     image: "/images/plants/AG-150.svg",
     available: false,
-    stock: 0,
+    stock: 1,
     featured: false,
     isNew: true,
     description:
@@ -136,7 +136,7 @@ const plants = [
     price: 180,
     image: "/images/plants/AG-180.svg",
     available: true,
-    stock: 4,
+    stock: 1,
     featured: true,
     isNew: false,
     description:
@@ -174,7 +174,7 @@ const plants = [
     price: 350,
     image: "/images/plants/AG-210.jpg",
     available: true,
-    stock: 2,
+    stock: 1,
     featured: false,
     isNew: true,
     description:
@@ -212,7 +212,7 @@ const plants = [
     price: 260,
     image: "/images/plants/AG-260.svg",
     available: true,
-    stock: 3,
+    stock: 1,
     featured: false,
     isNew: false,
     description:
@@ -269,7 +269,7 @@ const plants = [
     price: 130,
     image: "/images/plants/AG-330.svg",
     available: false,
-    stock: 0,
+    stock: 1,
     featured: false,
     isNew: false,
     description:
