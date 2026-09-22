@@ -7,6 +7,7 @@
 
 const categories = [
   { slug: "cactus", name: "Cactus", blurb: "Spiny, sculptural, low-fuss." },
+  { slug: "snake-plant", name: "Snake Plant",blurb: "Bold, upright, hardy, and easy to care for."},
   { slug: "succulents", name: "Succulents", blurb: "Plump leaves, easy care." },
   { slug: "indoor-plants", name: "Indoor Plants", blurb: "For shelves and quiet corners." },
   { slug: "outdoor-plants", name: "Outdoor Plants", blurb: "Happiest in open sun." },
