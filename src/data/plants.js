@@ -270,7 +270,7 @@ const plants = [
     price: 130,
     image: "/images/plants/AG-330.svg",
     available: false,
-    stock: 0,
+    stock: 1,
     featured: false,
     isNew: false,
     description:
