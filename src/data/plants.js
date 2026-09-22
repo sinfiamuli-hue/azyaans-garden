@@ -320,7 +320,7 @@ const plants = [
     fact: "The ZZ plant stores water in its thick rhizomes, which is why it can go weeks without a drink.",
   },
     {
-    id: "AG-441",
+  id: "AG-441",
   name: "Snake Plant",
   slug: "snake-plant-ag-441",
   category: "indoor-plants",
@@ -338,6 +338,25 @@ const plants = [
   size: "Medium",
   fact: "Snake plants produce oxygen and filter indoor air pollutants even at night through Crassulacean Acid Metabolism (CAM) photosynthesis.",
   },
+  {
+  id: "AG-338",
+  name: "African Spear",
+  slug: "african-spear-plant-ag-338",
+  category: "indoor-plants",
+  price: 650,
+  image: "/images/plants/AG-338.jpg",
+  available: true,
+  stock: 1,
+  featured: false,
+  isNew: true,
+  description:
+    "Striking, smooth, cylindrical spears that shoot straight up from the soil. Highly architectural, extremely durable, and thrives with minimal attention.",
+  light: "Bright indirect to full sun",
+  watering: "Water sparingly, let soil dry out fully between waterings",
+  difficulty: "Easy",
+  size: "Medium",
+  fact: "Unlike flat-leaved snake plants, African Spear leaves are completely smooth, round, and so tough that they are often braided into living sculptures.",
+}
 ];
 
 // SAFETY CHECK (only runs while developing with `npm run dev`).
